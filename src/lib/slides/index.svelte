@@ -1,7 +1,8 @@
 <script>
 	import { onMount } from "svelte";
     import constants from "$lib/constants";
-	import Description from "./lower.md";
+	import Description from "$lib/lower.md";
+	import Slides from "$lib/slides/slides.md";
 
     const date = new Date();
 
@@ -17,30 +18,16 @@
     })
 
     // Fullscreen
-    let fullscreen = false;
+    let fullscreen = true;
 
 	function toggleFullscreen() {
         fullscreen = !fullscreen
 	}
-
-    $: amazing = 0;
 </script>
 
-<div class="reveal" style="height:{fullscreen ? 'calc(100% - 3rem)' : '50%'}">
+<div class="reveal" style="height:{fullscreen ? 'calc(100% - 3rem)' : '1rem'}">
     <div class="slides">
-        <p>Revealed</p>
-        <section>
-            <h1>
-                Svelte + RevealJS 
-            </h1>
-            <h2>
-                (Reactive AF)
-            </h2>
-            {amazing}
-            <br>
-            <button on:click={()=>amazing++}>click me</button>
-        </section>
-        <section>Slide 2</section>
+        <Slides />
     </div>
 </div>
 

@@ -5,7 +5,7 @@
 # {constants.title}
 ## {constants.subtitle}
 
-So much
+Press `<Esc>` to see Overview.
 
 <br>
 <br>
